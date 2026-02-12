@@ -1,4 +1,5 @@
 site_name: L2 Telegram Bot
+site_url: https://projackl2.github.io/L2-Telegram-Bot/
 site_description: User guide for installing, configuring, and customizing L2 Telegram Bot (Hub + Agent)
 
 theme:
