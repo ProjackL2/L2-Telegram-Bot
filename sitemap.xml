@@ -1,87 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
-        <loc>None./</loc>
+        <loc>https://projackl2.github.io/L2-Telegram-Bot/</loc>
         <lastmod>2026-02-12</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="None"/>
-        <xhtml:link rel="alternate" hreflang="ru" href="Noneru/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://projackl2.github.io/L2-Telegram-Bot/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://projackl2.github.io/L2-Telegram-Bot/ru/"/>
     </url>
     <url>
-        <loc>Nonebot-creation/</loc>
+        <loc>https://projackl2.github.io/L2-Telegram-Bot/bot-creation/</loc>
         <lastmod>2026-02-12</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonebot-creation/"/>
-        <xhtml:link rel="alternate" hreflang="ru" href="Noneru/bot-creation/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://projackl2.github.io/L2-Telegram-Bot/bot-creation/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://projackl2.github.io/L2-Telegram-Bot/ru/bot-creation/"/>
     </url>
     <url>
-        <loc>Noneconfiguration/</loc>
+        <loc>https://projackl2.github.io/L2-Telegram-Bot/configuration/</loc>
         <lastmod>2026-02-12</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneconfiguration/"/>
-        <xhtml:link rel="alternate" hreflang="ru" href="Noneru/configuration/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://projackl2.github.io/L2-Telegram-Bot/configuration/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://projackl2.github.io/L2-Telegram-Bot/ru/configuration/"/>
     </url>
     <url>
-        <loc>Nonecustomization/</loc>
+        <loc>https://projackl2.github.io/L2-Telegram-Bot/customization/</loc>
         <lastmod>2026-02-12</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonecustomization/"/>
-        <xhtml:link rel="alternate" hreflang="ru" href="Noneru/customization/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://projackl2.github.io/L2-Telegram-Bot/customization/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://projackl2.github.io/L2-Telegram-Bot/ru/customization/"/>
     </url>
     <url>
-        <loc>Noneinstallation/</loc>
+        <loc>https://projackl2.github.io/L2-Telegram-Bot/installation/</loc>
         <lastmod>2026-02-12</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneinstallation/"/>
-        <xhtml:link rel="alternate" hreflang="ru" href="Noneru/installation/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://projackl2.github.io/L2-Telegram-Bot/installation/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://projackl2.github.io/L2-Telegram-Bot/ru/installation/"/>
     </url>
     <url>
-        <loc>Nonelocalization/</loc>
+        <loc>https://projackl2.github.io/L2-Telegram-Bot/localization/</loc>
         <lastmod>2026-02-12</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonelocalization/"/>
-        <xhtml:link rel="alternate" hreflang="ru" href="Noneru/localization/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://projackl2.github.io/L2-Telegram-Bot/localization/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://projackl2.github.io/L2-Telegram-Bot/ru/localization/"/>
     </url>
     <url>
-        <loc>Noneru/</loc>
+        <loc>https://projackl2.github.io/L2-Telegram-Bot/ru/</loc>
         <lastmod>2026-02-12</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="ru" href="Noneru/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="None"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://projackl2.github.io/L2-Telegram-Bot/ru/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://projackl2.github.io/L2-Telegram-Bot/"/>
     </url>
     <url>
-        <loc>Noneru/bot-creation/</loc>
+        <loc>https://projackl2.github.io/L2-Telegram-Bot/ru/bot-creation/</loc>
         <lastmod>2026-02-12</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="ru" href="Noneru/bot-creation/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonebot-creation/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://projackl2.github.io/L2-Telegram-Bot/ru/bot-creation/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://projackl2.github.io/L2-Telegram-Bot/bot-creation/"/>
     </url>
     <url>
-        <loc>Noneru/configuration/</loc>
+        <loc>https://projackl2.github.io/L2-Telegram-Bot/ru/configuration/</loc>
         <lastmod>2026-02-12</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="ru" href="Noneru/configuration/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneconfiguration/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://projackl2.github.io/L2-Telegram-Bot/ru/configuration/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://projackl2.github.io/L2-Telegram-Bot/configuration/"/>
     </url>
     <url>
-        <loc>Noneru/customization/</loc>
+        <loc>https://projackl2.github.io/L2-Telegram-Bot/ru/customization/</loc>
         <lastmod>2026-02-12</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="ru" href="Noneru/customization/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonecustomization/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://projackl2.github.io/L2-Telegram-Bot/ru/customization/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://projackl2.github.io/L2-Telegram-Bot/customization/"/>
     </url>
     <url>
-        <loc>Noneru/installation/</loc>
+        <loc>https://projackl2.github.io/L2-Telegram-Bot/ru/installation/</loc>
         <lastmod>2026-02-12</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="ru" href="Noneru/installation/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneinstallation/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://projackl2.github.io/L2-Telegram-Bot/ru/installation/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://projackl2.github.io/L2-Telegram-Bot/installation/"/>
     </url>
     <url>
-        <loc>Noneru/localization/</loc>
+        <loc>https://projackl2.github.io/L2-Telegram-Bot/ru/localization/</loc>
         <lastmod>2026-02-12</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="ru" href="Noneru/localization/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonelocalization/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://projackl2.github.io/L2-Telegram-Bot/ru/localization/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://projackl2.github.io/L2-Telegram-Bot/localization/"/>
     </url>
 </urlset>
