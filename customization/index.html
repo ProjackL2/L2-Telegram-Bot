@@ -255,6 +255,33 @@
   
   
     <li class="md-nav__item">
+      <a href="../showcase/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Showcase
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../installation/" class="md-nav__link">
         
   
@@ -263,6 +290,33 @@
     
   
     Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Licensing
   
 
     
@@ -466,6 +520,78 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#agent-integration-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Agent integration guide
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Agent integration guide">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-implement-server-and-character-apis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Implement Server and Character APIs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-initialize-the-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Initialize the Agent
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-define-and-register-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Define and Register Events
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-implement-and-register-listeners" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Implement and Register Listeners
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-character-linking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Character Linking
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -544,6 +670,78 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#agent-integration-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Agent integration guide
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Agent integration guide">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-implement-server-and-character-apis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Implement Server and Character APIs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-initialize-the-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Initialize the Agent
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-define-and-register-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Define and Register Events
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-implement-and-register-listeners" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Implement and Register Listeners
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-character-linking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Character Linking
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -565,32 +763,11 @@
 <p>This chapter shows safe, templated ways to adapt the bot and agent to your server.</p>
 <h2 id="customize-menus-and-commands-hub">Customize menus and commands (Hub)</h2>
 <ul>
-<li>Menu texts and help messages live in <code>config/localization/messages/</code> (see Localization chapter).</li>
-<li>For deeper behavior changes, explore the Hub code under <code>java/l2tg/hub/</code>:<ul>
-<li>Bot layer: <code>java/l2tg/hub/bot/</code> and <code>java/l2tg/hub/bot/command/**</code></li>
-<li>Services: <code>java/l2tg/hub/service/**</code></li>
-</ul>
-</li>
-<li>Typical customizations:<ul>
-<li>Add or hide menu items for admins/players.</li>
-<li>Change how server stats are formatted before sending to Telegram.</li>
-</ul>
-</li>
-<li>After code changes:<ul>
-<li>Rebuild the Hub: <code>gradlew.bat obfuscateHub</code> (or <code>distHub</code> for a ready folder).</li>
-<li>Replace <code>l2tg-hub-1.0.jar</code> on your server and restart.</li>
-</ul>
-</li>
+<li>Menu texts and help messages live in <code>config/localization/messages/</code> (see <a href="../localization/">Localization</a> chapter).</li>
 </ul>
 <h2 id="customize-agent-integration-script">Customize Agent integration script</h2>
 <ul>
-<li>The Agent integrates with your game server via <code>AgentScript.java</code> located per target:<ul>
-<li><code>target/asgard/script/services/AgentScript.java</code></li>
-<li><code>target/kain/script/services/AgentScript.java</code></li>
-<li><code>target/eternity-hf/script/services/AgentScript.java</code></li>
-</ul>
-</li>
-<li>These files are copied into the distribution as <code>game/data/scripts/services/AgentScript.java</code>.</li>
+<li>The Agent integrates with your game server via <code>AgentScript.java</code>.</li>
 <li>What you can change:<ul>
 <li>Which in‑game events to watch and send to the Hub (kills, levels, logins, etc.).</li>
 <li>How player names/IDs are resolved.</li>
@@ -611,6 +788,102 @@
 <li>Watch Hub logs for RMI registration messages when an Agent connects.</li>
 <li>If messages are delayed, review <code>tg.global.rate_limit</code>, <code>event.sender.pool_size</code>, and network latency.</li>
 </ul>
+<h2 id="agent-integration-guide">Agent integration guide</h2>
+<p>The Agent acts as a bridge between your game server and the Hub. Integration is typically done via a script (e.g., <code>AgentScript.java</code>) that initializes the Agent and hooks into your server's event system.</p>
+<h3 id="1-implement-server-and-character-apis">1. Implement Server and Character APIs</h3>
+<p>You must provide implementations for <code>IGameServerApi</code> and <code>ICharacterApi</code> so the Agent can query server status and character details.</p>
+<ul>
+<li><a href="../game-server-api/">IGameServerApi</a>: Provides methods for uptime, memory usage, online player count, and character resolution (ID to Name, Name to ID). It also includes <code>reportLinkSuccess(characterId, username)</code> which is called when a character is successfully linked to a Telegram user.</li>
+<li><a href="../character-api/">ICharacterApi</a>: A simple wrapper for character data (Name, Level, Class ID).</li>
+</ul>
+<pre><code class="language-java">public class MyGameServerApi implements IGameServerApi {
+    @Override
+    public int getOnlinePlayers() {
+        return GameObjectsStorage.getAllPlayersCount();
+    }
+
+    @Override
+    public void reportLinkSuccess(int characterId, String username) {
+        // Optional: Notify the player in-game about successful linking
+    }
+    // ... implement other methods
+}
+</code></pre>
+<h3 id="2-initialize-the-agent">2. Initialize the Agent</h3>
+<p>The Agent is a singleton. You should configure it with your API implementation and then start it.</p>
+<pre><code class="language-java">final Agent agent = Agent.getInstance();
+agent.setGameServerApi(new MyGameServerApi());
+// ... register events and listeners (see below)
+agent.start();
+</code></pre>
+<h3 id="3-define-and-register-events">3. Define and Register Events</h3>
+<p>Events are data packets sent to the Hub. You should create classes that inherit from <code>l2tg.agent.event.Event</code>.</p>
+<ul>
+<li><strong>Event Name</strong>: Must be unique and match the <code>name</code> attribute of a <code>&lt;tr /&gt;</code> tag in <code>events.xml</code>.</li>
+<li><strong>Fields</strong>: All fields in your event class are automatically available as placeholders in the localization message (e.g., a field <code>String playerName</code> can be used as <code>%playerName%</code> in <code>events.xml</code>).</li>
+</ul>
+<pre><code class="language-java">public static class LevelUpEvent extends Event {
+    public static String NAME = &quot;level_up&quot;;
+    private final String playerName;
+    private final int level;
+
+    public LevelUpEvent(int playerId, String playerName, int level) {
+        super(NAME, playerId);
+        this.playerName = playerName;
+        this.level = level;
+    }
+}
+
+// Registration (call this before agent.start()):
+agent.registerEvent(LevelUpEvent.NAME);
+</code></pre>
+<h3 id="4-implement-and-register-listeners">4. Implement and Register Listeners</h3>
+<p>Listeners catch in-game events and submit them to the Agent. Inherit from <code>l2tg.agent.event.EventListener</code> and implement your game server's listener interfaces.</p>
+<pre><code class="language-java">public static class LevelChangeListener extends EventListener implements OnLevelChangeListener {
+    @Override
+    public void onLevelChange(Player player, int oldLvl, int newLvl) {
+        if (oldLvl &lt; newLvl) {
+            Agent.getInstance().submitEvent(new LevelUpEvent(player.getObjectId(), player.getName(), newLvl));
+        }
+    }
+
+    @Override
+    public void register() {
+        PlayerListenerList.addGlobal(this);
+    }
+
+    @Override
+    public void unregister() {
+        PlayerListenerList.removeGlobal(this);
+    }
+}
+
+// Registration:
+agent.registerListener(new LevelChangeListener());
+</code></pre>
+<h3 id="5-character-linking">5. Character Linking</h3>
+<p>To allow players to link their in-game character to Telegram, you must provide a way for them to obtain a unique linking URL.</p>
+<ul>
+<li>Call <code>Agent.getInstance().getCharacterLink(playerId)</code> to get the URL.</li>
+<li>If it returns an empty string, the character is already linked.</li>
+<li>You can show this link to the player via a bypass command or an HTML window.</li>
+<li>For a better user experience, you can generate a QR code from this link using <code>QrCodeService.getInstance().getOrCreateDdsQrCodeImage(link)</code> and send it to the client (e.g., as a pledge crest).</li>
+</ul>
+<pre><code class="language-java">public boolean useBypass(String command, Player player) {
+    if (command.startsWith(&quot;linktg&quot;)) {
+        String link = Agent.getInstance().getCharacterLink(player.getObjectId());
+        if (link != null) {
+            if (link.isEmpty()) {
+                // Character already linked
+            } else {
+                // Show link or QR code to player
+            }
+        }
+        return true;
+    }
+    return false;
+}
+</code></pre>
 
 
 

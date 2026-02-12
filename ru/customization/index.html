@@ -255,6 +255,33 @@
   
   
     <li class="md-nav__item">
+      <a href="../showcase/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Showcase
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../installation/" class="md-nav__link">
         
   
@@ -263,6 +290,33 @@
     
   
     Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Licensing
   
 
     
@@ -466,6 +520,78 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#agent_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Руководство по интеграции Agent
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Руководство по интеграции Agent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-server-character-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Реализация Server и Character API
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Инициализация Agent
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Определение и регистрация событий
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Реализация и регистрация слушателей
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Привязка персонажа
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -544,6 +670,78 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#agent_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Руководство по интеграции Agent
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Руководство по интеграции Agent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-server-character-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Реализация Server и Character API
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Инициализация Agent
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Определение и регистрация событий
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Реализация и регистрация слушателей
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Привязка персонажа
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -565,32 +763,11 @@
 <p>Этот раздел описывает надежные способы адаптации бота и агента под ваш сервер с использованием шаблонов.</p>
 <h2 id="hub">Настройка меню и команд (Hub)</h2>
 <ul>
-<li>Тексты меню и справочные сообщения находятся в <code>config/localization/messages/</code> (см. раздел «Локализация»).</li>
-<li>Для более глубоких изменений поведения изучите код Hub в папке <code>java/l2tg/hub/</code>:<ul>
-<li>Уровень бота: <code>java/l2tg/hub/bot/</code> и <code>java/l2tg/hub/bot/command/**</code></li>
-<li>Сервисы: <code>java/l2tg/hub/service/**</code></li>
-</ul>
-</li>
-<li>Типичные изменения:<ul>
-<li>Добавление или скрытие пунктов меню для администраторов/игроков.</li>
-<li>Изменение формата статистики сервера перед отправкой в Telegram.</li>
-</ul>
-</li>
-<li>После изменения кода:<ul>
-<li>Пересоберите Hub: <code>gradlew.bat obfuscateHub</code> (или <code>distHub</code> для получения готовой папки).</li>
-<li>Замените <code>l2tg-hub-1.0.jar</code> на вашем сервере и перезапустите его.</li>
-</ul>
-</li>
+<li>Тексты меню и справочные сообщения находятся в <code>config/localization/messages/</code> (см. раздел <a href="../localization/">Локализация</a>).</li>
 </ul>
 <h2 id="agent">Настройка скрипта интеграции Agent</h2>
 <ul>
-<li>Agent интегрируется с вашим игровым сервером через <code>AgentScript.java</code>, расположенный для каждой цели:<ul>
-<li><code>target/asgard/script/services/AgentScript.java</code></li>
-<li><code>target/kain/script/services/AgentScript.java</code></li>
-<li><code>target/eternity-hf/script/services/AgentScript.java</code></li>
-</ul>
-</li>
-<li>Эти файлы копируются в дистрибутив как <code>game/data/scripts/services/AgentScript.java</code>.</li>
+<li>Agent интегрируется с вашим игровым сервером через <code>AgentScript.java</code>.</li>
 <li>Что можно изменить:<ul>
 <li>Какие внутриигровые события отслеживать и отправлять в Hub (убийства, уровни, входы и т. д.).</li>
 <li>Как разрешаются имена/ID игроков.</li>
@@ -611,6 +788,102 @@
 <li>Следите за логами Hub на предмет сообщений о регистрации RMI при подключении Agent.</li>
 <li>Если сообщения задерживаются, проверьте параметры <code>tg.global.rate_limit</code>, <code>event.sender.pool_size</code> и задержку сети.</li>
 </ul>
+<h2 id="agent_1">Руководство по интеграции Agent</h2>
+<p>Agent выступает в качестве моста между вашим игровым сервером и Hub. Интеграция обычно выполняется через скрипт (например, <code>AgentScript.java</code>), который инициализирует Agent и подключается к системе событий вашего сервера.</p>
+<h3 id="1-server-character-api">1. Реализация Server и Character API</h3>
+<p>Вы должны предоставить реализации для <code>IGameServerApi</code> и <code>ICharacterApi</code>, чтобы Agent мог запрашивать статус сервера и данные персонажей.</p>
+<ul>
+<li><a href="../game-server-api/">IGameServerApi</a>: Предоставляет методы для получения времени аптайма, использования памяти, количества игроков онлайн и разрешения имен/ID персонажей. Также включает метод <code>reportLinkSuccess(characterId, username)</code>, который вызывается при успешной привязке персонажа к пользователю Telegram.</li>
+<li><a href="../character-api/">ICharacterApi</a>: Простая обертка для данных персонажа (имя, уровень, ID класса).</li>
+</ul>
+<pre><code class="language-java">public class MyGameServerApi implements IGameServerApi {
+    @Override
+    public int getOnlinePlayers() {
+        return GameObjectsStorage.getAllPlayersCount();
+    }
+
+    @Override
+    public void reportLinkSuccess(int characterId, String username) {
+        // Опционально: Уведомите игрока в игре об успешной привязке
+    }
+    // ... реализуйте остальные методы
+}
+</code></pre>
+<h3 id="2-agent">2. Инициализация Agent</h3>
+<p>Agent является синглтоном. Вам необходимо настроить его, передав вашу реализацию API, а затем запустить.</p>
+<pre><code class="language-java">final Agent agent = Agent.getInstance();
+agent.setGameServerApi(new MyGameServerApi());
+// ... регистрация событий и слушателей (см. ниже)
+agent.start();
+</code></pre>
+<h3 id="3">3. Определение и регистрация событий</h3>
+<p>События — это пакеты данных, отправляемые в Hub. Вам необходимо создать классы, наследующие <code>l2tg.agent.event.Event</code>.</p>
+<ul>
+<li><strong>Имя события (Event Name)</strong>: Должно быть уникальным и соответствовать атрибуту <code>name</code> тега <code>&lt;tr /&gt;</code> в файле <code>events.xml</code>.</li>
+<li><strong>Поля (Fields)</strong>: Все поля вашего класса события автоматически становятся доступными как плейсхолдеры в локализованном сообщении (например, поле <code>String playerName</code> можно использовать как <code>%playerName%</code> в <code>events.xml</code>).</li>
+</ul>
+<pre><code class="language-java">public static class LevelUpEvent extends Event {
+    public static String NAME = &quot;level_up&quot;;
+    private final String playerName;
+    private final int level;
+
+    public LevelUpEvent(int playerId, String playerName, int level) {
+        super(NAME, playerId);
+        this.playerName = playerName;
+        this.level = level;
+    }
+}
+
+// Регистрация (вызывается до agent.start()):
+agent.registerEvent(LevelUpEvent.NAME);
+</code></pre>
+<h3 id="4">4. Реализация и регистрация слушателей</h3>
+<p>Слушатели перехватывают внутриигровые события и передают их в Agent. Наследуйте <code>l2tg.agent.event.EventListener</code> и реализуйте интерфейсы слушателей вашего игрового сервера.</p>
+<pre><code class="language-java">public static class LevelChangeListener extends EventListener implements OnLevelChangeListener {
+    @Override
+    public void onLevelChange(Player player, int oldLvl, int newLvl) {
+        if (oldLvl &lt; newLvl) {
+            Agent.getInstance().submitEvent(new LevelUpEvent(player.getObjectId(), player.getName(), newLvl));
+        }
+    }
+
+    @Override
+    public void register() {
+        PlayerListenerList.addGlobal(this);
+    }
+
+    @Override
+    public void unregister() {
+        PlayerListenerList.removeGlobal(this);
+    }
+}
+
+// Регистрация:
+agent.registerListener(new LevelChangeListener());
+</code></pre>
+<h3 id="5">5. Привязка персонажа</h3>
+<p>Чтобы игроки могли привязать своего игрового персонажа к Telegram, вы должны предоставить им способ получить уникальную ссылку для привязки.</p>
+<ul>
+<li>Вызовите <code>Agent.getInstance().getCharacterLink(playerId)</code>, чтобы получить ссылку.</li>
+<li>Если метод возвращает пустую строку, персонаж уже привязан.</li>
+<li>Вы можете показать эту ссылку игроку через команду bypass или в окне HTML.</li>
+<li>Для лучшего пользовательского опыта вы можете сгенерировать QR-код из этой ссылки с помощью <code>QrCodeService.getInstance().getOrCreateDdsQrCodeImage(link)</code> и отправить его клиенту (например, как эмблему клана/pledge crest).</li>
+</ul>
+<pre><code class="language-java">public boolean useBypass(String command, Player player) {
+    if (command.startsWith(&quot;linktg&quot;)) {
+        String link = Agent.getInstance().getCharacterLink(player.getObjectId());
+        if (link != null) {
+            if (link.isEmpty()) {
+                // Персонаж уже привязан
+            } else {
+                // Показать ссылку или QR-код игроку
+            }
+        }
+        return true;
+    }
+    return false;
+}
+</code></pre>
 
 
 

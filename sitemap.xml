@@ -15,6 +15,13 @@
         <xhtml:link rel="alternate" hreflang="ru" href="https://projackl2.github.io/L2-Telegram-Bot/ru/bot-creation/"/>
     </url>
     <url>
+        <loc>https://projackl2.github.io/L2-Telegram-Bot/character-api/</loc>
+        <lastmod>2026-02-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://projackl2.github.io/L2-Telegram-Bot/character-api/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://projackl2.github.io/L2-Telegram-Bot/ru/character-api/"/>
+    </url>
+    <url>
         <loc>https://projackl2.github.io/L2-Telegram-Bot/configuration/</loc>
         <lastmod>2026-02-12</lastmod>
         <changefreq>daily</changefreq>
@@ -29,6 +36,13 @@
         <xhtml:link rel="alternate" hreflang="ru" href="https://projackl2.github.io/L2-Telegram-Bot/ru/customization/"/>
     </url>
     <url>
+        <loc>https://projackl2.github.io/L2-Telegram-Bot/game-server-api/</loc>
+        <lastmod>2026-02-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://projackl2.github.io/L2-Telegram-Bot/game-server-api/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://projackl2.github.io/L2-Telegram-Bot/ru/game-server-api/"/>
+    </url>
+    <url>
         <loc>https://projackl2.github.io/L2-Telegram-Bot/installation/</loc>
         <lastmod>2026-02-12</lastmod>
         <changefreq>daily</changefreq>
@@ -36,11 +50,25 @@
         <xhtml:link rel="alternate" hreflang="ru" href="https://projackl2.github.io/L2-Telegram-Bot/ru/installation/"/>
     </url>
     <url>
+        <loc>https://projackl2.github.io/L2-Telegram-Bot/licensing/</loc>
+        <lastmod>2026-02-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://projackl2.github.io/L2-Telegram-Bot/licensing/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://projackl2.github.io/L2-Telegram-Bot/ru/licensing/"/>
+    </url>
+    <url>
         <loc>https://projackl2.github.io/L2-Telegram-Bot/localization/</loc>
         <lastmod>2026-02-12</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://projackl2.github.io/L2-Telegram-Bot/localization/"/>
         <xhtml:link rel="alternate" hreflang="ru" href="https://projackl2.github.io/L2-Telegram-Bot/ru/localization/"/>
+    </url>
+    <url>
+        <loc>https://projackl2.github.io/L2-Telegram-Bot/showcase/</loc>
+        <lastmod>2026-02-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://projackl2.github.io/L2-Telegram-Bot/showcase/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://projackl2.github.io/L2-Telegram-Bot/ru/showcase/"/>
     </url>
     <url>
         <loc>https://projackl2.github.io/L2-Telegram-Bot/ru/</loc>
@@ -57,6 +85,13 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://projackl2.github.io/L2-Telegram-Bot/bot-creation/"/>
     </url>
     <url>
+        <loc>https://projackl2.github.io/L2-Telegram-Bot/ru/character-api/</loc>
+        <lastmod>2026-02-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://projackl2.github.io/L2-Telegram-Bot/ru/character-api/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://projackl2.github.io/L2-Telegram-Bot/character-api/"/>
+    </url>
+    <url>
         <loc>https://projackl2.github.io/L2-Telegram-Bot/ru/configuration/</loc>
         <lastmod>2026-02-12</lastmod>
         <changefreq>daily</changefreq>
@@ -71,6 +106,13 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://projackl2.github.io/L2-Telegram-Bot/customization/"/>
     </url>
     <url>
+        <loc>https://projackl2.github.io/L2-Telegram-Bot/ru/game-server-api/</loc>
+        <lastmod>2026-02-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://projackl2.github.io/L2-Telegram-Bot/ru/game-server-api/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://projackl2.github.io/L2-Telegram-Bot/game-server-api/"/>
+    </url>
+    <url>
         <loc>https://projackl2.github.io/L2-Telegram-Bot/ru/installation/</loc>
         <lastmod>2026-02-12</lastmod>
         <changefreq>daily</changefreq>
@@ -78,10 +120,24 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://projackl2.github.io/L2-Telegram-Bot/installation/"/>
     </url>
     <url>
+        <loc>https://projackl2.github.io/L2-Telegram-Bot/ru/licensing/</loc>
+        <lastmod>2026-02-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://projackl2.github.io/L2-Telegram-Bot/ru/licensing/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://projackl2.github.io/L2-Telegram-Bot/licensing/"/>
+    </url>
+    <url>
         <loc>https://projackl2.github.io/L2-Telegram-Bot/ru/localization/</loc>
         <lastmod>2026-02-12</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ru" href="https://projackl2.github.io/L2-Telegram-Bot/ru/localization/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://projackl2.github.io/L2-Telegram-Bot/localization/"/>
+    </url>
+    <url>
+        <loc>https://projackl2.github.io/L2-Telegram-Bot/ru/showcase/</loc>
+        <lastmod>2026-02-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://projackl2.github.io/L2-Telegram-Bot/ru/showcase/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://projackl2.github.io/L2-Telegram-Bot/showcase/"/>
     </url>
 </urlset>

@@ -13,10 +13,10 @@
         <link rel="canonical" href="https://projackl2.github.io/L2-Telegram-Bot/ru/installation/">
       
       
-        <link rel="prev" href="../">
+        <link rel="prev" href="../showcase/">
       
       
-        <link rel="next" href="../bot-creation/">
+        <link rel="next" href="../licensing/">
       
       
         
@@ -254,6 +254,33 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../showcase/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Showcase
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -375,6 +402,17 @@
   <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
+        Дополнительные настройки игрового сервера
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
         Обновление
       
     </span>
@@ -386,6 +424,33 @@
   
 </nav>
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -583,6 +648,17 @@
   <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
+        Дополнительные настройки игрового сервера
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
         Обновление
       
     </span>
@@ -611,7 +687,7 @@
 <p>Этот раздел поможет вам установить Hub (сервер Telegram-бота) и Agent (компонент на стороне игрового сервера).</p>
 <h3 id="_2">Предварительные требования</h3>
 <ul>
-<li>Установленная Java 21 или новее в системном PATH (<code>java -version</code>).</li>
+<li>Установленная Java 23 или новее в системном PATH (<code>java -version</code>).</li>
 <li>Сетевое соединение между хостом Hub и каждым хостом Agent (порты по умолчанию: Hub <code>1099</code>, Agent <code>1100</code>).</li>
 <li>Игровой сервер с рабочим скриптом интеграции, а именно <code>AgentScript.java</code>.</li>
 </ul>
@@ -630,6 +706,7 @@
 <li>Windows: дважды щелкните по <code>start.bat</code> или запустите <code>start.bat</code> в консоли.</li>
 <li>Linux/macOS: <code>chmod +x ./start.sh &amp;&amp; ./start.sh</code></li>
 <li>Или запустите напрямую: <code>java -jar l2tg-hub-1.0.jar</code></li>
+<li><em>Примечание</em>: При первом запуске Hub потребуется лицензия. Подробности см. в разделе <a href="../licensing/">Лицензирование</a>.</li>
 </ul>
 <h3 id="agent">Пакет Agent</h3>
 <ul>
@@ -658,7 +735,14 @@
 <li>Откройте порт Agent <code>1100/tcp</code> на каждом хосте Agent для входящих соединений от Hub (для обратных вызовов RMI).</li>
 <li>Убедитесь, что значения <code>hub.host</code> и <code>agent.host</code> достижимы с противоположной стороны.</li>
 </ul>
-<h3 id="_5">Обновление</h3>
+<h3 id="_5">Дополнительные настройки игрового сервера</h3>
+<p>Скрипт интеграции должен присутствовать на игровом сервере и должен называться <code>AgentScript.java</code>.</p>
+<p>По умолчанию скрипт интеграции содержит обработчик bypass для привязки персонажа через QR-код.</p>
+<p>Пример кнопки bypass:</p>
+<pre><code>&lt;button value=&quot;tg&quot; action=&quot;bypass -h linktg&quot; width=90 height=24 back=&quot;L2UI_CT1.Button_DF_Down&quot; fore=&quot;L2UI_CT1.Button_DF&quot;&gt;
+</code></pre>
+<p>Не забудьте добавить <code>linktg</code> в конфигурацию <code>InitialBypassEncodeIgnore</code> в <code>security.ini</code> игрового сервера.</p>
+<h3 id="_6">Обновление</h3>
 <ul>
 <li>Остановите процессы Hub/Agent.</li>
 <li>Замените JAR-файлы на новые версии.</li>

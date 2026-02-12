@@ -257,6 +257,33 @@
   
   
     <li class="md-nav__item">
+      <a href="../showcase/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Showcase
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../installation/" class="md-nav__link">
         
   
@@ -265,6 +292,33 @@
     
   
     Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Licensing
   
 
     
@@ -407,6 +461,17 @@
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
+        Как открыть порты
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
         Применение изменений конфигурации
       
     </span>
@@ -539,6 +604,17 @@
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
+        Как открыть порты
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
         Применение изменений конфигурации
       
     </span>
@@ -648,7 +724,11 @@ events.period=250
 <li>Управляет форматами и уровнями логирования. Вы можете повысить уровень детализации во время поиска неисправностей.</li>
 <li>Обычный способ повысить детализацию — переключить корневой пакет или конкретные пакеты на уровень <code>DEBUG</code>.</li>
 </ul>
-<h3 id="_2">Применение изменений конфигурации</h3>
+<h3 id="_2">Как открыть порты</h3>
+<p>Открытие портов критически важно, так как Hub и Agent взаимодействуют по протоколу RMI (Remote Method Invocation). Для корректной работы системы Hub должен принимать входящие соединения от агентов (по умолчанию <code>1099</code>), а каждый Agent должен принимать обратные вызовы от Hub (по умолчанию <code>1100</code>). Если эти порты заблокированы брандмауэром, компоненты не смогут обнаружить друг друга или обмениваться данными, что приведет к ошибкам соединения.</p>
+<p><a href="https://www.kamatera.com/knowledgebase/how-to-open-a-port-in-windows-firewall/">Как открыть порт в Windows Server</a></p>
+<p><a href="https://www.digitalocean.com/community/tutorials/opening-a-port-on-linux">Как открыть порт в Linux</a></p>
+<h3 id="_3">Применение изменений конфигурации</h3>
 <ul>
 <li>Для большинства настроек требуется перезапуск Hub/Agent, чтобы изменения вступили в силу.</li>
 <li>Полезная практика: делайте резервные копии оригинальных файлов перед редактированием и используйте систему контроля версий для отслеживания изменений.</li>

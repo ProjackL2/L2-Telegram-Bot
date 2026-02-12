@@ -13,10 +13,10 @@
         <link rel="canonical" href="https://projackl2.github.io/L2-Telegram-Bot/installation/">
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../showcase/">
       
       
-        <link rel="next" href="../bot-creation/">
+        <link rel="next" href="../licensing/">
       
       
         
@@ -254,6 +254,33 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../showcase/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Showcase
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -372,6 +399,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#additional-game-server-setups" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Additional Game Server setups
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#upgrading" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -386,6 +424,33 @@
   
 </nav>
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -580,6 +645,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#additional-game-server-setups" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Additional Game Server setups
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#upgrading" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -611,7 +687,7 @@
 <p>This chapter guides you through installing the Hub (telegram bot server) and the Agent (game‑server side component).</p>
 <h3 id="prerequisites">Prerequisites</h3>
 <ul>
-<li>Java 21 or newer installed and on PATH (<code>java -version</code>).</li>
+<li>Java 23 or newer installed and on PATH (<code>java -version</code>).</li>
 <li>Network connectivity between the Hub host and each Agent host (default ports: Hub <code>1099</code>, Agent <code>1100</code>).</li>
 <li>A game server with a working integration script a.k.a <code>AgentScript.java</code>.</li>
 </ul>
@@ -636,6 +712,7 @@
 <li>Or run directly: <code>java -jar l2tg-hub-1.0.jar</code></li>
 </ul>
 </li>
+<li><em>Note</em>: On the first run, the Hub will require a license. See <a href="../licensing/">Licensing</a> for details.</li>
 </ul>
 <h3 id="agent-package">Agent package</h3>
 <ul>
@@ -668,6 +745,13 @@
 <li>Open Agent port <code>1100/tcp</code> on each Agent host for inbound connections from the Hub (for RMI callbacks).</li>
 <li>Ensure that <code>hub.host</code> and <code>agent.host</code> values are reachable from the opposite side.</li>
 </ul>
+<h3 id="additional-game-server-setups">Additional Game Server setups</h3>
+<p>The integration script must be present on the game server and must be named <code>AgentScript.java</code>.</p>
+<p>By default, integration script contains bypass handler for QR code character linking.</p>
+<p>Example of bypass button:</p>
+<pre><code>&lt;button value=&quot;tg&quot; action=&quot;bypass -h linktg&quot; width=90 height=24 back=&quot;L2UI_CT1.Button_DF_Down&quot; fore=&quot;L2UI_CT1.Button_DF&quot;&gt;
+</code></pre>
+<p>Remember to add linktg to <code>InitialBypassEncodeIgnore</code> config in gameserver <code>security.ini</code></p>
 <h3 id="upgrading">Upgrading</h3>
 <ul>
 <li>Stop the Hub/Agent processes.</li>
