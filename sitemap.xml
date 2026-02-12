@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>None./</loc>
+        <lastmod>2026-02-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="None"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Noneru/"/>
+    </url>
+    <url>
+        <loc>Nonebot-creation/</loc>
+        <lastmod>2026-02-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonebot-creation/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Noneru/bot-creation/"/>
+    </url>
+    <url>
+        <loc>Noneconfiguration/</loc>
+        <lastmod>2026-02-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneconfiguration/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Noneru/configuration/"/>
+    </url>
+    <url>
+        <loc>Nonecustomization/</loc>
+        <lastmod>2026-02-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonecustomization/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Noneru/customization/"/>
+    </url>
+    <url>
+        <loc>Noneinstallation/</loc>
+        <lastmod>2026-02-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneinstallation/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Noneru/installation/"/>
+    </url>
+    <url>
+        <loc>Nonelocalization/</loc>
+        <lastmod>2026-02-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonelocalization/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Noneru/localization/"/>
+    </url>
+    <url>
+        <loc>Noneru/</loc>
+        <lastmod>2026-02-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Noneru/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="None"/>
+    </url>
+    <url>
+        <loc>Noneru/bot-creation/</loc>
+        <lastmod>2026-02-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Noneru/bot-creation/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonebot-creation/"/>
+    </url>
+    <url>
+        <loc>Noneru/configuration/</loc>
+        <lastmod>2026-02-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Noneru/configuration/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneconfiguration/"/>
+    </url>
+    <url>
+        <loc>Noneru/customization/</loc>
+        <lastmod>2026-02-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Noneru/customization/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonecustomization/"/>
+    </url>
+    <url>
+        <loc>Noneru/installation/</loc>
+        <lastmod>2026-02-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Noneru/installation/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneinstallation/"/>
+    </url>
+    <url>
+        <loc>Noneru/localization/</loc>
+        <lastmod>2026-02-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Noneru/localization/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonelocalization/"/>
+    </url>
+</urlset>
