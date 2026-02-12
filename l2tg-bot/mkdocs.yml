@@ -17,10 +17,17 @@ plugins:
         - locale: ru
           name: Русский
 
+markdown_extensions:
+  - attr_list
+  - pymdownx.blocks.caption
+
 nav:
   - Home: index.md
+  - Showcase: showcase.md
   - Installation: installation.md
+  - Licensing: licensing.md
   - Telegram Bot Creation: bot-creation.md
   - Configuration: configuration.md
   - Localization: localization.md
   - Customization: customization.md
+

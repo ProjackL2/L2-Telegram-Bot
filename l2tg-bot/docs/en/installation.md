@@ -4,7 +4,7 @@ This chapter guides you through installing the Hub (telegram bot server) and the
  
 ### Prerequisites
 
-- Java 21 or newer installed and on PATH (`java -version`).
+- Java 23 or newer installed and on PATH (`java -version`).
 - Network connectivity between the Hub host and each Agent host (default ports: Hub `1099`, Agent `1100`).
 - A game server with a working integration script a.k.a `AgentScript.java`.
 
@@ -23,6 +23,7 @@ This chapter guides you through installing the Hub (telegram bot server) and the
      - Windows: double‑click `start.bat` or run `start.bat` in a console.
      - Linux/macOS: `chmod +x ./start.sh && ./start.sh`
      - Or run directly: `java -jar l2tg-hub-1.0.jar`
+   - *Note*: On the first run, the Hub will require a license. See [Licensing](licensing.md) for details.
 
 ### Agent package
 
@@ -51,6 +52,18 @@ If you have more than one game server:
 - Open Hub port `1099/tcp` on the Hub host for inbound connections from Agents.
 - Open Agent port `1100/tcp` on each Agent host for inbound connections from the Hub (for RMI callbacks).
 - Ensure that `hub.host` and `agent.host` values are reachable from the opposite side.
+
+### Additional Game Server setups
+The integration script must be present on the game server and must be named `AgentScript.java`.
+
+By default, integration script contains bypass handler for QR code character linking.
+
+Example of bypass button:
+```
+<button value="tg" action="bypass -h linktg" width=90 height=24 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+```
+
+Remember to add linktg to `InitialBypassEncodeIgnore` config in gameserver `security.ini`
 
 ### Upgrading
 

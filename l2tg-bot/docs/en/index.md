@@ -1,7 +1,5 @@
 # L2 Telegram Bot — User Guide
 
-Welcome!
-
 This documentation helps you install, configure, and customize the L2 Telegram Bot and its companion Agent.
 
 Project distributed as compiled JARs and configuration files. The system consists of two parts:
@@ -13,10 +11,14 @@ Project distributed as compiled JARs and configuration files. The system consist
 
 The primary goal of the service is to provide the ability to receive events happening with a character on the game server.
 
-- Flexible configuration of displayed events
-- Character status and game session statistics (received drop, adena)
-- Multi-server support
-- Interface localization
+- Flexible configuration of displayed events.
+- Customizable scripts for each custom event type.
+- Character status and game session statistics (received drop, adena).
+- Admin control over the linked characters.
+- Multi-server support.
+- Interface localization.
+
+Check out the [Showcase](showcase.md) for screenshots of the bot in action.
 
 ### Multi-Server Support:
 
@@ -30,8 +32,10 @@ The L2 Telegram Bot is designed with a Hub‑Agent architecture that supports **
 
 Use the navigation to the left to find what you need:
 
-- [Installation](installation.md) — prerequisites, build, and run instructions for Hub and Agent.
 - [Telegram Bot Creation](bot-creation.md) — how to create a bot with @BotFather and obtain a token.
+- [Showcase](showcase.md) — images of the bot in action.
+- [Installation](installation.md) — prerequisites, build, and run instructions for Hub and Agent.
+- [Licensing](licensing.md) — how to activate your Hub.
 - [Configuration](configuration.md) — all properties you can set for Hub and Agent.
 - [Localization](localization.md) — where messages live and how to edit them.
 - [Customization](customization.md) — ways to adapt scripts and behavior for your server.

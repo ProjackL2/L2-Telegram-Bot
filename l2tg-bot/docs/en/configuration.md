@@ -91,6 +91,13 @@ Notes
 - Controls log formats and levels. You can increase verbosity during troubleshooting.
 - A typical way to raise verbosity is to switch the root or specific packages to `DEBUG` level.
 
+### How to open ports
+
+Opening ports is essential because the Hub and Agent communicate using RMI (Remote Method Invocation). For the system to function correctly, the Hub must be able to accept incoming connections from Agents (default: `1099`), and each Agent must be able to accept callback connections from the Hub (default: `1100`). If these ports are blocked by a firewall, the components will not be able to "see" or talk to each other, resulting in connection errors.
+
+- [Opening ports on windows server](https://www.kamatera.com/knowledgebase/how-to-open-a-port-in-windows-firewall/)
+- [Opening ports on linux server](https://www.digitalocean.com/community/tutorials/opening-a-port-on-linux)
+
 ### Applying configuration changes
 
 - For most settings, restart the Hub/Agent to apply changes.
