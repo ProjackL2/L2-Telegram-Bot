@@ -1,1 +1,25 @@
-site_name: My Docs
+site_name: L2 Telegram Bot
+site_description: User guide for installing, configuring, and customizing L2 Telegram Bot (Hub + Agent)
+
+theme:
+  name: material
+  language: en
+
+plugins:
+  - search
+  - i18n:
+      docs_structure: folder
+      languages:
+        - locale: en
+          name: English
+          default: true
+        - locale: ru
+          name: Русский
+
+nav:
+  - Home: index.md
+  - Installation: installation.md
+  - Telegram Bot Creation: bot-creation.md
+  - Configuration: configuration.md
+  - Localization: localization.md
+  - Customization: customization.md
