@@ -88,7 +88,29 @@ public static class LevelUpEvent extends Event {
 agent.registerEvent(LevelUpEvent.NAME);
 ```
 
-### 4. Implement and Register Listeners
+### 4. Define special Admin Events
+
+Agent allows sending special events directly to admin users. You should create classes that inherit from `l2tg.agent.event.AdminEvent`.
+
+- **Event Name**: Must be unique and match the `name` attribute of a `<tr />` tag in `events.xml`.
+- **Fields**: All fields in your event class are automatically available as placeholders in the localization message (e.g., a field `String playerName` can be used as `%playerName%` in `events.xml`).
+
+```java
+public static class ReachedLevelEvent extends AdminEvent {
+    public static String NAME = "level_up";
+    private final String playerName;
+
+    public ReachedLevelEvent(String playerName, int level) {
+        super(NAME);
+        this.playerName = playerName;
+    }
+}
+
+// Registration (call this before agent.start()):
+agent.registerEvent(ReachedLevelEvent.NAME);
+```
+
+### 5. Implement and Register Listeners
 
 Listeners catch in-game events and submit them to the Agent. Inherit from `l2tg.agent.event.EventListener` and implement your game server's listener interfaces.
 
@@ -116,7 +138,7 @@ public static class LevelChangeListener extends EventListener implements OnLevel
 agent.registerListener(new LevelChangeListener());
 ```
 
-### 5. Character Linking
+### 6. Character Linking
 
 To allow players to link their in-game character to Telegram, you must provide a way for them to obtain a unique linking URL.
 

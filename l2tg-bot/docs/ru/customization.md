@@ -88,7 +88,29 @@ public static class LevelUpEvent extends Event {
 agent.registerEvent(LevelUpEvent.NAME);
 ```
 
-### 4. Реализация и регистрация слушателей
+### 4. Определение специальных админ событий
+
+Agent позволяет отправлять события напрямую администраторам. Вам необходимо создать классы, наследующие `l2tg.agent.event.AdminEvent`.
+
+- **Имя события (Event Name)**: Должно быть уникальным и соответствовать атрибуту `name` тега `<tr />` в файле `events.xml`.
+- **Поля (Fields)**: Все поля вашего класса события автоматически становятся доступными как плейсхолдеры в локализованном сообщении (например, поле `String playerName` можно использовать как `%playerName%` в `events.xml`).
+
+```java
+public static class ReachedLevelEvent extends AdminEvent {
+    public static String NAME = "level_up";
+    private final String playerName;
+
+    public ReachedLevelEvent(String playerName, int level) {
+        super(NAME);
+        this.playerName = playerName;
+    }
+}
+
+// Registration (call this before agent.start()):
+agent.registerEvent(ReachedLevelEvent.NAME);
+```
+
+### 5. Реализация и регистрация слушателей
 
 Слушатели перехватывают внутриигровые события и передают их в Agent. Наследуйте `l2tg.agent.event.EventListener` и реализуйте интерфейсы слушателей вашего игрового сервера.
 
@@ -116,7 +138,7 @@ public static class LevelChangeListener extends EventListener implements OnLevel
 agent.registerListener(new LevelChangeListener());
 ```
 
-### 5. Привязка персонажа
+### 6. Привязка персонажа
 
 Чтобы игроки могли привязать своего игрового персонажа к Telegram, вы должны предоставить им способ получить уникальную ссылку для привязки.
 
