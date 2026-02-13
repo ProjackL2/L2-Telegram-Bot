@@ -695,7 +695,7 @@
 <ul>
 <li>Copy the contents of <code>hub/</code> to your target server.</li>
 <li>Files of interest:<ul>
-<li><code>l2tg-hub-1.0.jar</code> — executable Hub JAR.</li>
+<li><code>l2tg-hub-&lt;version&gt;.jar</code> — executable Hub JAR.</li>
 <li><code>config/hub.properties</code> — hub configuration.</li>
 <li><code>config/log.properties</code> — logging configuration.</li>
 <li><code>start.bat</code> / <code>start.sh</code> — convenience launch scripts.</li>
@@ -709,7 +709,7 @@
 <li>Start Hub:<ul>
 <li>Windows: double‑click <code>start.bat</code> or run <code>start.bat</code> in a console.</li>
 <li>Linux/macOS: <code>chmod +x ./start.sh &amp;&amp; ./start.sh</code></li>
-<li>Or run directly: <code>java -jar l2tg-hub-1.0.jar</code></li>
+<li>Or run directly: <code>java -jar l2tg-hub-&lt;version&gt;.jar</code> (replace <code>&lt;version&gt;</code> with actual version number)</li>
 </ul>
 </li>
 <li><em>Note</em>: On the first run, the Hub will require a license. See <a href="../licensing/">Licensing</a> for details.</li>
@@ -718,7 +718,7 @@
 <ul>
 <li>Copy the resulting folder from <code>temp/agent-&lt;target&gt;/</code> to your game server machine.</li>
 <li>Files of interest inside Agent package:<ul>
-<li><code>libs/l2tg-agent-1.0.jar</code> — Agent binary.</li>
+<li><code>libs/l2tg-agent-&lt;version&gt;.jar</code> — Agent binary.</li>
 <li><code>game/config/agent.properties</code> — Agent configuration.</li>
 <li><code>game/data/scripts/services/AgentScript.java</code> — integration script for your game server.</li>
 <li><code>game/data/...</code> — additional data/HTML used by the bot.</li>

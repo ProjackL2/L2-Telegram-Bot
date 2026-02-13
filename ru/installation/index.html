@@ -695,7 +695,7 @@
 <ul>
 <li>Скопируйте содержимое папки <code>hub/</code> на ваш целевой сервер.</li>
 <li>Важные файлы:</li>
-<li><code>l2tg-hub-1.0.jar</code> — исполняемый JAR-файл Hub.</li>
+<li><code>l2tg-hub-&lt;version&gt;.jar</code> — исполняемый JAR-файл Hub.</li>
 <li><code>config/hub.properties</code> — конфигурация Hub.</li>
 <li><code>config/log.properties</code> — конфигурация логирования.</li>
 <li><code>start.bat</code> / <code>start.sh</code> — скрипты для удобного запуска.</li>
@@ -705,14 +705,14 @@
 <li>Запустите Hub:</li>
 <li>Windows: дважды щелкните по <code>start.bat</code> или запустите <code>start.bat</code> в консоли.</li>
 <li>Linux/macOS: <code>chmod +x ./start.sh &amp;&amp; ./start.sh</code></li>
-<li>Или запустите напрямую: <code>java -jar l2tg-hub-1.0.jar</code></li>
+<li>Или запустите напрямую: <code>java -jar l2tg-hub-&lt;version&gt;.jar</code> (замените <code>&lt;version&gt;</code> на фактический номер версии)</li>
 <li><em>Примечание</em>: При первом запуске Hub потребуется лицензия. Подробности см. в разделе <a href="../licensing/">Лицензирование</a>.</li>
 </ul>
 <h3 id="agent">Пакет Agent</h3>
 <ul>
 <li>Скопируйте полученную папку из <code>temp/agent-&lt;target&gt;/</code> на машину с вашим игровым сервером.</li>
 <li>Важные файлы внутри пакета Agent:</li>
-<li><code>libs/l2tg-agent-1.0.jar</code> — бинарный файл Agent.</li>
+<li><code>libs/l2tg-agent-&lt;version&gt;.jar</code> — бинарный файл Agent.</li>
 <li><code>game/config/agent.properties</code> — конфигурация Agent.</li>
 <li><code>game/data/scripts/services/AgentScript.java</code> — скрипт интеграции для вашего игрового сервера.</li>
 <li><code>game/data/...</code> — дополнительные данные/HTML, используемые ботом.</li>
