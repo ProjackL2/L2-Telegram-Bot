@@ -569,7 +569,7 @@
   <a href="#4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. Реализация и регистрация слушателей
+        4. Определение специальных админ событий
       
     </span>
   </a>
@@ -580,7 +580,18 @@
   <a href="#5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5. Привязка персонажа
+        5. Реализация и регистрация слушателей
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Привязка персонажа
       
     </span>
   </a>
@@ -719,7 +730,7 @@
   <a href="#4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. Реализация и регистрация слушателей
+        4. Определение специальных админ событий
       
     </span>
   </a>
@@ -730,7 +741,18 @@
   <a href="#5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5. Привязка персонажа
+        5. Реализация и регистрация слушателей
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Привязка персонажа
       
     </span>
   </a>
@@ -837,7 +859,26 @@ agent.start();
 // Регистрация (вызывается до agent.start()):
 agent.registerEvent(LevelUpEvent.NAME);
 </code></pre>
-<h3 id="4">4. Реализация и регистрация слушателей</h3>
+<h3 id="4">4. Определение специальных админ событий</h3>
+<p>Agent позволяет отправлять события напрямую администраторам. Вам необходимо создать классы, наследующие <code>l2tg.agent.event.AdminEvent</code>.</p>
+<ul>
+<li><strong>Имя события (Event Name)</strong>: Должно быть уникальным и соответствовать атрибуту <code>name</code> тега <code>&lt;tr /&gt;</code> в файле <code>events.xml</code>.</li>
+<li><strong>Поля (Fields)</strong>: Все поля вашего класса события автоматически становятся доступными как плейсхолдеры в локализованном сообщении (например, поле <code>String playerName</code> можно использовать как <code>%playerName%</code> в <code>events.xml</code>).</li>
+</ul>
+<pre><code class="language-java">public static class ReachedLevelEvent extends AdminEvent {
+    public static String NAME = &quot;level_up&quot;;
+    private final String playerName;
+
+    public ReachedLevelEvent(String playerName, int level) {
+        super(NAME);
+        this.playerName = playerName;
+    }
+}
+
+// Registration (call this before agent.start()):
+agent.registerEvent(ReachedLevelEvent.NAME);
+</code></pre>
+<h3 id="5">5. Реализация и регистрация слушателей</h3>
 <p>Слушатели перехватывают внутриигровые события и передают их в Agent. Наследуйте <code>l2tg.agent.event.EventListener</code> и реализуйте интерфейсы слушателей вашего игрового сервера.</p>
 <pre><code class="language-java">public static class LevelChangeListener extends EventListener implements OnLevelChangeListener {
     @Override
@@ -861,7 +902,7 @@ agent.registerEvent(LevelUpEvent.NAME);
 // Регистрация:
 agent.registerListener(new LevelChangeListener());
 </code></pre>
-<h3 id="5">5. Привязка персонажа</h3>
+<h3 id="6">6. Привязка персонажа</h3>
 <p>Чтобы игроки могли привязать своего игрового персонажа к Telegram, вы должны предоставить им способ получить уникальную ссылку для привязки.</p>
 <ul>
 <li>Вызовите <code>Agent.getInstance().getCharacterLink(playerId)</code>, чтобы получить ссылку.</li>

@@ -566,10 +566,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#4-implement-and-register-listeners" class="md-nav__link">
+  <a href="#4-define-special-admin-events" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. Implement and Register Listeners
+        4. Define special Admin Events
       
     </span>
   </a>
@@ -577,10 +577,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#5-character-linking" class="md-nav__link">
+  <a href="#5-implement-and-register-listeners" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5. Character Linking
+        5. Implement and Register Listeners
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-character-linking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Character Linking
       
     </span>
   </a>
@@ -716,10 +727,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#4-implement-and-register-listeners" class="md-nav__link">
+  <a href="#4-define-special-admin-events" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. Implement and Register Listeners
+        4. Define special Admin Events
       
     </span>
   </a>
@@ -727,10 +738,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#5-character-linking" class="md-nav__link">
+  <a href="#5-implement-and-register-listeners" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5. Character Linking
+        5. Implement and Register Listeners
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-character-linking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Character Linking
       
     </span>
   </a>
@@ -837,7 +859,26 @@ agent.start();
 // Registration (call this before agent.start()):
 agent.registerEvent(LevelUpEvent.NAME);
 </code></pre>
-<h3 id="4-implement-and-register-listeners">4. Implement and Register Listeners</h3>
+<h3 id="4-define-special-admin-events">4. Define special Admin Events</h3>
+<p>Agent allows sending special events directly to admin users. You should create classes that inherit from <code>l2tg.agent.event.AdminEvent</code>.</p>
+<ul>
+<li><strong>Event Name</strong>: Must be unique and match the <code>name</code> attribute of a <code>&lt;tr /&gt;</code> tag in <code>events.xml</code>.</li>
+<li><strong>Fields</strong>: All fields in your event class are automatically available as placeholders in the localization message (e.g., a field <code>String playerName</code> can be used as <code>%playerName%</code> in <code>events.xml</code>).</li>
+</ul>
+<pre><code class="language-java">public static class ReachedLevelEvent extends AdminEvent {
+    public static String NAME = &quot;level_up&quot;;
+    private final String playerName;
+
+    public ReachedLevelEvent(String playerName, int level) {
+        super(NAME);
+        this.playerName = playerName;
+    }
+}
+
+// Registration (call this before agent.start()):
+agent.registerEvent(ReachedLevelEvent.NAME);
+</code></pre>
+<h3 id="5-implement-and-register-listeners">5. Implement and Register Listeners</h3>
 <p>Listeners catch in-game events and submit them to the Agent. Inherit from <code>l2tg.agent.event.EventListener</code> and implement your game server's listener interfaces.</p>
 <pre><code class="language-java">public static class LevelChangeListener extends EventListener implements OnLevelChangeListener {
     @Override
@@ -861,7 +902,7 @@ agent.registerEvent(LevelUpEvent.NAME);
 // Registration:
 agent.registerListener(new LevelChangeListener());
 </code></pre>
-<h3 id="5-character-linking">5. Character Linking</h3>
+<h3 id="6-character-linking">6. Character Linking</h3>
 <p>To allow players to link their in-game character to Telegram, you must provide a way for them to obtain a unique linking URL.</p>
 <ul>
 <li>Call <code>Agent.getInstance().getCharacterLink(playerId)</code> to get the URL.</li>
