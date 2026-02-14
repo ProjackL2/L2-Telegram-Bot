@@ -652,12 +652,12 @@ tg.token=
 # Example: 123456789,987654321
 tg.admin_chat_ids=
 
-# Hostname/IP the Hub will advertise for RMI. Must be reachable from Agents.
+# Hostname/IP the Hub will advertise for gRPC. Must be reachable from Agents.
 hub.host=127.0.0.1
-hub.port=1099
+hub.port=1964
 
 # Shared secret. If set on Hub, every Agent must set the same token.
-rmi.auth.token=
+hub.auth.token=
 
 # Localization
 # Default language key (see Localization chapter)
@@ -689,7 +689,7 @@ db.pool.max_size=10
 <ul>
 <li><code>tg.username</code>, <code>tg.token</code>, <code>tg.admin_chat_ids</code> can be obtained from <a href="../bot-creation/">Telegram Bot Creation</a>.</li>
 <li><code>hub.host</code> should be the public or internal address Agents can reach. If Hub runs behind NAT, forward and publish the correct reachable address.</li>
-<li><code>rmi.auth.token</code> must be consistent across all Hub and Agent instances.</li>
+<li><code>hub.auth.token</code> must be consistent across all Hub and Agent instances.</li>
 <li>If you change <code>db.url</code>, ensure the JDBC driver matches and the path is writable. By default, SQLite is installed with the distribution.</li>
 <li>Rate limit should stay within Telegram global limits.</li>
 </ul>
@@ -698,16 +698,16 @@ db.pool.max_size=10
 server.id=1
 server.name=Server Name
 
-# Address of the Hub RMI endpoint (the one Agents connect to)
+# Address of the Hub gRPC endpoint (the one Agents connect to)
 hub.host=127.0.0.1
-hub.port=1099
+hub.port=1964
 
 # Address that the Agent advertises for callbacks from the Hub
 agent.host=127.0.0.1
-agent.port=1100
+agent.port=1965
 
 # Must match Hub if set
-rmi.auth.token=
+hub.auth.token=
 
 # Polling &amp; heartbeat (milliseconds)
 ping.period=5000
@@ -717,7 +717,7 @@ events.period=250
 <ul>
 <li><code>server.id</code> must be unique across all Agents connected to the same Hub. This is critical for the system to distinguish between different game servers.</li>
 <li><code>agent.host</code> must be reachable by the Hub (consider NAT/port‑forwarding if needed).</li>
-<li>Keep <code>rmi.auth.token</code> secret and consistent across Hub and all Agents.</li>
+<li>Keep <code>hub.auth.token</code> secret and consistent across Hub and all Agents.</li>
 </ul>
 <h3 id="logging-configuration-configlogproperties">Logging configuration — <code>config/log.properties</code></h3>
 <ul>
@@ -725,7 +725,7 @@ events.period=250
 <li>A typical way to raise verbosity is to switch the root or specific packages to <code>DEBUG</code> level.</li>
 </ul>
 <h3 id="how-to-open-ports">How to open ports</h3>
-<p>Opening ports is essential because the Hub and Agent communicate using RMI (Remote Method Invocation). For the system to function correctly, the Hub must be able to accept incoming connections from Agents (default: <code>1099</code>), and each Agent must be able to accept callback connections from the Hub (default: <code>1100</code>). If these ports are blocked by a firewall, the components will not be able to "see" or talk to each other, resulting in connection errors.</p>
+<p>Opening ports is essential because the Hub and Agent communicate using gRPC. For the system to function correctly, the Hub must be able to accept incoming connections from Agents (default: <code>1964</code>), and each Agent must be able to accept callback connections from the Hub (default: <code>1965</code>). If these ports are blocked by a firewall, the components will not be able to "see" or talk to each other, resulting in connection errors.</p>
 <ul>
 <li><a href="https://www.kamatera.com/knowledgebase/how-to-open-a-port-in-windows-firewall/">Opening ports on windows server</a></li>
 <li><a href="https://www.digitalocean.com/community/tutorials/opening-a-port-on-linux">Opening ports on linux server</a></li>

@@ -688,14 +688,14 @@
 <h3 id="_2">Предварительные требования</h3>
 <ul>
 <li>Установленная Java 23 или новее в системном PATH (<code>java -version</code>).</li>
-<li>Сетевое соединение между хостом Hub и каждым хостом Agent (порты по умолчанию: Hub <code>1099</code>, Agent <code>1100</code>).</li>
+<li>Сетевое соединение между хостом Hub и каждым хостом Agent (порты по умолчанию: Hub <code>1964</code>, Agent <code>1965</code>).</li>
 <li>Игровой сервер с рабочим скриптом интеграции, а именно <code>AgentScript.java</code>.</li>
 </ul>
 <h3 id="hub">Пакет Hub</h3>
 <ul>
 <li>Скопируйте содержимое папки <code>hub/</code> на ваш целевой сервер.</li>
 <li>Важные файлы:</li>
-<li><code>l2tg-hub-&lt;version&gt;.jar</code> — исполняемый JAR-файл Hub.</li>
+<li><code>l2tg-hub.jar</code> — исполняемый JAR-файл Hub.</li>
 <li><code>config/hub.properties</code> — конфигурация Hub.</li>
 <li><code>config/log.properties</code> — конфигурация логирования.</li>
 <li><code>start.bat</code> / <code>start.sh</code> — скрипты для удобного запуска.</li>
@@ -705,21 +705,21 @@
 <li>Запустите Hub:</li>
 <li>Windows: дважды щелкните по <code>start.bat</code> или запустите <code>start.bat</code> в консоли.</li>
 <li>Linux/macOS: <code>chmod +x ./start.sh &amp;&amp; ./start.sh</code></li>
-<li>Или запустите напрямую: <code>java -jar l2tg-hub-&lt;version&gt;.jar</code> (замените <code>&lt;version&gt;</code> на фактический номер версии)</li>
+<li>Или запустите напрямую: <code>java -jar l2tg-hub.jar</code></li>
 <li><em>Примечание</em>: При первом запуске Hub потребуется лицензия. Подробности см. в разделе <a href="../licensing/">Лицензирование</a>.</li>
 </ul>
 <h3 id="agent">Пакет Agent</h3>
 <ul>
-<li>Скопируйте полученную папку из <code>temp/agent-&lt;target&gt;/</code> на машину с вашим игровым сервером.</li>
+<li>Скопируйте полученную папку из <code>agent/</code> на машину с вашим игровым сервером.</li>
 <li>Важные файлы внутри пакета Agent:</li>
-<li><code>libs/l2tg-agent-&lt;version&gt;.jar</code> — бинарный файл Agent.</li>
+<li><code>libs/l2tg-agent.jar</code> — бинарный файл Agent.</li>
 <li><code>game/config/agent.properties</code> — конфигурация Agent.</li>
 <li><code>game/data/scripts/services/AgentScript.java</code> — скрипт интеграции для вашего игрового сервера.</li>
 <li><code>game/data/...</code> — дополнительные данные/HTML, используемые ботом.</li>
 <li>Отредактируйте <code>game/config/agent.properties</code>:</li>
 <li>Укажите в <code>hub.host</code>/<code>hub.port</code> адрес вашего экземпляра Hub.</li>
 <li>Установите уникальный <code>server.id</code> и понятное <code>server.name</code>.</li>
-<li>Убедитесь, что <code>rmi.auth.token</code> совпадает с Hub (если используется).</li>
+<li>Убедитесь, что <code>hub.auth.token</code> совпадает с Hub (если используется).</li>
 <li>Разместите <code>AgentScript.java</code> в скриптах вашего игрового сервера и перезагрузите скрипты согласно процедуре вашего сервера или перезагрузите сервер.</li>
 </ul>
 <h3 id="_3">Развертывание нескольких агентов</h3>
@@ -727,12 +727,12 @@
 <ol>
 <li>Повторите шаги «Пакет Agent» для каждого игрового сервера.</li>
 <li>В файле <code>game/config/agent.properties</code> каждого агента назначьте <strong>уникальный</strong> <code>server.id</code> (например, <code>1</code>, <code>2</code>, <code>3</code>) и описательное имя <code>server.name</code>.</li>
-<li>Если несколько агентов работают на <strong>одной физической машине</strong>, они должны использовать разные значения <code>agent.port</code> (например, <code>1100</code>, <code>1101</code> и т. д.), чтобы избежать конфликтов портов.</li>
+<li>Если несколько агентов работают на <strong>одной физической машине</strong>, они должны использовать разные значения <code>agent.port</code> (например, <code>1965</code>, <code>1966</code> и т. д.), чтобы избежать конфликтов портов.</li>
 </ol>
 <h3 id="_4">Брандмауэр и сеть</h3>
 <ul>
-<li>Откройте порт Hub <code>1099/tcp</code> на хосте Hub для входящих соединений от Agents.</li>
-<li>Откройте порт Agent <code>1100/tcp</code> на каждом хосте Agent для входящих соединений от Hub (для обратных вызовов RMI).</li>
+<li>Откройте порт Hub <code>1964/tcp</code> на хосте Hub для входящих соединений от Agents.</li>
+<li>Откройте порт Agent <code>1965/tcp</code> на каждом хосте Agent для входящих соединений от Hub (для обратных вызовов gRPC).</li>
 <li>Убедитесь, что значения <code>hub.host</code> и <code>agent.host</code> достижимы с противоположной стороны.</li>
 </ul>
 <h3 id="_5">Дополнительные настройки игрового сервера</h3>

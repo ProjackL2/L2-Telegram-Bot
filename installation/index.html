@@ -687,15 +687,15 @@
 <p>This chapter guides you through installing the Hub (telegram bot server) and the Agent (game‑server side component).</p>
 <h3 id="prerequisites">Prerequisites</h3>
 <ul>
-<li>Java 23 or newer installed and on PATH (<code>java -version</code>).</li>
-<li>Network connectivity between the Hub host and each Agent host (default ports: Hub <code>1099</code>, Agent <code>1100</code>).</li>
+<li>Java 21 or newer installed and on PATH (<code>java -version</code>).</li>
+<li>Network connectivity between the Hub host and each Agent host (default ports: Hub <code>1964</code>, Agent <code>1965</code>).</li>
 <li>A game server with a working integration script a.k.a <code>AgentScript.java</code>.</li>
 </ul>
 <h3 id="hub-package">Hub package</h3>
 <ul>
-<li>Copy the contents of <code>hub/</code> to your target server.</li>
+<li>Copy the contents of <code>hub/</code> to your target host server.</li>
 <li>Files of interest:<ul>
-<li><code>l2tg-hub-&lt;version&gt;.jar</code> — executable Hub JAR.</li>
+<li><code>l2tg-hub.jar</code> — executable Hub JAR.</li>
 <li><code>config/hub.properties</code> — hub configuration.</li>
 <li><code>config/log.properties</code> — logging configuration.</li>
 <li><code>start.bat</code> / <code>start.sh</code> — convenience launch scripts.</li>
@@ -709,16 +709,16 @@
 <li>Start Hub:<ul>
 <li>Windows: double‑click <code>start.bat</code> or run <code>start.bat</code> in a console.</li>
 <li>Linux/macOS: <code>chmod +x ./start.sh &amp;&amp; ./start.sh</code></li>
-<li>Or run directly: <code>java -jar l2tg-hub-&lt;version&gt;.jar</code> (replace <code>&lt;version&gt;</code> with actual version number)</li>
+<li>Or run directly: <code>java -jar l2tg-hub.jar</code></li>
 </ul>
 </li>
 <li><em>Note</em>: On the first run, the Hub will require a license. See <a href="../licensing/">Licensing</a> for details.</li>
 </ul>
 <h3 id="agent-package">Agent package</h3>
 <ul>
-<li>Copy the resulting folder from <code>temp/agent-&lt;target&gt;/</code> to your game server machine.</li>
+<li>Copy the resulting folder from <code>agent/</code> to your game server machine.</li>
 <li>Files of interest inside Agent package:<ul>
-<li><code>libs/l2tg-agent-&lt;version&gt;.jar</code> — Agent binary.</li>
+<li><code>libs/l2tg-agent.jar</code> — Agent binary.</li>
 <li><code>game/config/agent.properties</code> — Agent configuration.</li>
 <li><code>game/data/scripts/services/AgentScript.java</code> — integration script for your game server.</li>
 <li><code>game/data/...</code> — additional data/HTML used by the bot.</li>
@@ -727,7 +727,7 @@
 <li>Edit <code>game/config/agent.properties</code>:<ul>
 <li>Point <code>hub.host</code>/<code>hub.port</code> to your Hub instance.</li>
 <li>Set unique <code>server.id</code> and friendly <code>server.name</code>.</li>
-<li>Ensure <code>rmi.auth.token</code> matches Hub (if used).</li>
+<li>Ensure <code>hub.auth.token</code> matches Hub (if used).</li>
 </ul>
 </li>
 <li>Deploy <code>AgentScript.java</code> to your game server scripts and reload scripts following your server’s procedure, or restart the server.</li>
@@ -737,12 +737,12 @@
 <ol>
 <li>Repeat the "Agent package" steps for each game server.</li>
 <li>In each Agent's <code>game/config/agent.properties</code>, assign a <strong>unique</strong> <code>server.id</code> (e.g., <code>1</code>, <code>2</code>, <code>3</code>) and a descriptive <code>server.name</code>.</li>
-<li>If multiple Agents run on the <strong>same physical machine</strong>, they must use different <code>agent.port</code> values (e.g., <code>1100</code>, <code>1101</code>, etc.) to avoid port conflicts.</li>
+<li>If multiple Agents run on the <strong>same physical machine</strong>, they must use different <code>agent.port</code> values (e.g., <code>1965</code>, <code>1966</code>, etc.) to avoid port conflicts.</li>
 </ol>
 <h3 id="firewall-and-networking">Firewall and networking</h3>
 <ul>
-<li>Open Hub port <code>1099/tcp</code> on the Hub host for inbound connections from Agents.</li>
-<li>Open Agent port <code>1100/tcp</code> on each Agent host for inbound connections from the Hub (for RMI callbacks).</li>
+<li>Open Hub port <code>1964/tcp</code> on the Hub host for inbound connections from Agents.</li>
+<li>Open Agent port <code>1965/tcp</code> on each Agent host for inbound connections from the Hub (for gRPC callbacks).</li>
 <li>Ensure that <code>hub.host</code> and <code>agent.host</code> values are reachable from the opposite side.</li>
 </ul>
 <h3 id="additional-game-server-setups">Additional Game Server setups</h3>
